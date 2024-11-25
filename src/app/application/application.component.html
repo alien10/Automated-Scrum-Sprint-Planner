@@ -1,0 +1,12 @@
+<div class="app">
+  <app-story-form (addStoryEvent)="addStory($event)"></app-story-form>
+  <app-story-list [stories]="stories"></app-story-list>
+  <app-sprint-calculator
+    (generateSprintEvent)="generateSprint($event)"
+    (clearStoriesEvent)="clearStories()"
+    (clearSelectedStoriesEvent)="clearSelectedStories()"
+  ></app-sprint-calculator>
+  <app-auto-selected-sprint
+    [selectedStories]="selectedStories"
+  ></app-auto-selected-sprint>
+</div>

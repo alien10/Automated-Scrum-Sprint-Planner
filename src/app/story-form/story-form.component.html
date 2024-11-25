@@ -1,0 +1,26 @@
+<div class="story-form">
+<form (ngSubmit)="addStory()" #storyForm="ngForm">
+  <div>
+    <label for="storyName">Story Name</label>
+    <input
+      id="storyName"
+      type="text"
+      [(ngModel)]="storyName"
+      name="storyName"
+      required
+    />
+  </div>
+  <div>
+    <label for="storyPoints">Story Points</label>
+    <input
+      id="storyPoints"
+      type="number"
+      [(ngModel)]="storyPoints"
+      name="storyPoints"
+      required
+    />
+  </div>
+  <button type="submit" [disabled]="!storyForm.valid">Add Story</button>
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+</form>
+</div>

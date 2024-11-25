@@ -1,0 +1,9 @@
+<div class="auto-selected-sprint">
+  <h3>Auto-Selected Stories</h3>
+  <ul>
+    <li *ngFor="let story of selectedStories">
+      {{ story.name }} - {{ story.points }} points
+    </li>
+  </ul>
+  <p>Total Points: {{ totalPoints }}</p>
+</div>

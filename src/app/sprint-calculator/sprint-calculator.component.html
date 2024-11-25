@@ -1,0 +1,16 @@
+<div class="sprint-calculator">
+  <h3>Sprint Calculator</h3>
+  <form (ngSubmit)="generateSprint()" #sprintForm="ngForm">
+    <label for="capacity">Sprint Capacity</label>
+    <input
+      id="capacity"
+      type="number"
+      [(ngModel)]="sprintCapacity"
+      name="sprintCapacity"
+      required
+    />
+    <button type="submit">Generate Sprint</button>
+  </form>
+  <button (click)="clearStories()">Clear All Stories</button>
+  <button (click)="clearSelectedStories()">Clear Selected Stories</button>
+</div>
